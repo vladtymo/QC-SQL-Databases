@@ -2,8 +2,10 @@
 -- run script: select text + F5
 
 create database CyberAcademy;
+go
 
 use CyberAcademy;
+go
 
 -- logic operators: > < = <> >= <= and or not
 
@@ -28,6 +30,7 @@ create table Students
 	Email nvarchar(50) not null unique,
 	IsPremium bit not null default(0)
 );
+go
 
 -- Inserting sample data into the Students table
 INSERT INTO Students (Name, Surname, Birthdate, Course, AverageMark, Email, IsPremium) VALUES 
@@ -50,10 +53,12 @@ INSERT INTO Students (Name, Surname, Birthdate, Course, AverageMark, Email, IsPr
 ('Ethan', 'Turner', '1999-01-08', 'Criminal Justice', 8.7, 'ethan.turner@example.com', 1),
 ('Sophie', 'Ward', '1996-03-24', 'Environmental Science', 11.5, 'sophie.ward@example.com', 0),
 ('Jacob', 'Cooper', '1997-07-19', 'Statistics', 7.3, 'jacob.cooper@example.com', 1);
+go
 
 -- insert with invalid data
 INSERT INTO Students (Name, Surname, Birthdate, Course, AverageMark, Email, IsPremium) VALUES 
 ('John', 'Doe', '2001-05-15', 'Computer Science', 12, 'john.doe2@example.com', 1)
+go
 
 -- show table data
 select * from Students;
