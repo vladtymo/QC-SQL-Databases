@@ -57,7 +57,7 @@ go
 
 -- insert with invalid data
 INSERT INTO Students (Name, Surname, Birthdate, Course, AverageMark, Email, IsPremium) VALUES 
-('John', 'Doe', '2001-05-15', 'Computer Science', 12, 'john.doe2@example.com', 1)
+('John', 'Doe', '2025-05-15', 'Computer Science', 13, 'john.doe@example.com', 1)
 go
 
 -- show table data
