@@ -3,6 +3,8 @@
 
 create database CyberAcademy;
 go
+-- delete database
+--drop database CyberAcademy;
 
 use CyberAcademy;
 go
@@ -28,9 +30,21 @@ create table Students
 	Course nvarchar(200) not null,
 	AverageMark real null check(AverageMark >= 1 and AverageMark <= 12),
 	Email nvarchar(50) not null unique,
-	IsPremium bit not null default(0)
+	IsPremium bit not null default(0),
+	-- create foreign key with courses table
+	CourseId int references Courses(Id) not null
 );
 go
+
+-- delete table 
+drop table Students;
+
+-- create table for Courses and link with students
+create table Courses
+(
+	Id int primary key identity,
+	Name nvarchar(200) not null unique
+);
 
 -- Inserting sample data into the Students table
 INSERT INTO Students (Name, Surname, Birthdate, Course, AverageMark, Email, IsPremium) VALUES 
