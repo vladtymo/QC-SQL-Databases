@@ -121,3 +121,6 @@ select * from Teachers;
 select * from TeachersCourses;
 
 select Name, Surname, Birthdate from Students;
+
+---------------------- rename key
+sp_rename 'FK__Students__Course__2C3393D0', 'FK_Student_Course';
